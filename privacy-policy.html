@@ -3,24 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>プライバシーポリシー - Enseek</title>
-    <meta name="description" content="株式会社Enseekのプライバシーポリシーです。">
-    <meta property="og:title" content="プライバシーポリシー - Enseek">
-    <meta property="og:description" content="株式会社Enseekのプライバシーポリシーです。">
+    <title>プライバシーポリシー - Rerai</title>
+    <meta name="description" content="Reraiのプライバシーポリシーです。">
+    <meta property="og:title" content="プライバシーポリシー - Rerai">
+    <meta property="og:description" content="Reraiのプライバシーポリシーです。">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://enseek-dev.com/privacy-policy">
-    <link rel="canonical" href="https://enseek-dev.com/privacy-policy">
+    <meta property="og:url" content="https://rerai.jp/privacy-policy">
+    <link rel="canonical" href="https://rerai.jp/privacy-policy">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #66c3cc;
-            --primary-light: #99d6dd;
-            --primary-dark: #00a3af;
-            --text-primary: #333;
-            --text-secondary: #666;
-            --bg-light: #f8fafb;
+            --main-color: #3bd1dc;
+            --sub-color: #A2DB62;
+            --accent-color: #FFEA00;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #fafafa;
             --white: #ffffff;
-            --shadow: rgba(0, 0, 0, 0.08);
+            --pastel-pink: #FFE5E5;
+            --pastel-blue: #E5F4FF;
+            --pastel-green: #E8F5E8;
+            --pastel-yellow: #FFF9E5;
         }
 
         * {
@@ -30,10 +35,14 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Zen Maru Gothic', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
             line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--white);
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            background-image: 
+                radial-gradient(circle at 20% 80%, var(--pastel-pink) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, var(--pastel-blue) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, var(--pastel-green) 0%, transparent 50%);
         }
 
         /* ヘッダー */
@@ -43,107 +52,284 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px var(--shadow);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
             z-index: 1000;
+            transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, 
+                var(--main-color) 0%, 
+                var(--sub-color) 33%, 
+                var(--accent-color) 66%, 
+                var(--main-color) 100%
+            );
+            border-image-slice: 1;
         }
 
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 1.2rem 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         .logo {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: var(--main-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
         }
 
         .logo:hover {
-            color: var(--primary-color);
+            transform: rotate(2deg) scale(1.05);
+        }
+
+        .logo::before {
+            content: '';
+            width: 35px;
+            height: 35px;
+            background: var(--accent-color);
+            border-radius: 50% 40% 60% 30%;
+            position: relative;
+            animation: blob 8s infinite;
+            box-shadow: 
+                inset -3px -3px 10px rgba(255, 255, 255, 0.8),
+                inset 3px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        @keyframes blob {
+            0%, 100% { border-radius: 50% 40% 60% 30%; transform: rotate(0deg); }
+            25% { border-radius: 40% 60% 30% 50%; transform: rotate(90deg); }
+            50% { border-radius: 60% 30% 50% 40%; transform: rotate(180deg); }
+            75% { border-radius: 30% 50% 40% 60%; transform: rotate(270deg); }
         }
 
         /* メインコンテンツ */
         main {
-            margin-top: 80px;
+            margin-top: 100px;
             padding: 4rem 5%;
-            max-width: 800px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
         }
 
         .privacy-content {
             background: var(--white);
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 5px 20px var(--shadow);
+            padding: 4rem;
+            border-radius: 25px 30px 28px 32px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-0.5deg);
+            transition: all 0.3s ease;
+        }
+
+        .privacy-content:hover {
+            transform: rotate(0deg) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .privacy-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, 
+                var(--main-color) 0%, 
+                var(--sub-color) 33%, 
+                var(--accent-color) 66%, 
+                var(--main-color) 100%
+            );
         }
 
         h1 {
-            color: var(--primary-dark);
-            font-size: 2.5rem;
+            color: var(--main-color);
+            font-size: 3rem;
             margin-bottom: 2rem;
             text-align: center;
+            font-weight: 700;
+            transform: rotate(-1deg);
+            position: relative;
+        }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 10px 15px 12px 18px;
+            opacity: 0.7;
         }
 
         h2 {
-            color: var(--primary-dark);
+            color: var(--main-color);
             font-size: 1.8rem;
-            margin: 2rem 0 1rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--primary-light);
+            margin: 3rem 0 1.5rem;
+            padding-bottom: 0.8rem;
+            border-bottom: 3px solid var(--pastel-blue);
+            font-weight: 700;
+            transform: rotate(-0.5deg);
+            position: relative;
+        }
+
+        h2::before {
+            content: '🔒';
+            position: absolute;
+            left: -30px;
+            top: 0;
+            font-size: 1.2rem;
+            opacity: 0.7;
         }
 
         p {
-            margin-bottom: 1rem;
-            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         ul {
-            margin: 1rem 0;
+            margin: 1.5rem 0;
             padding-left: 2rem;
         }
 
         li {
-            margin-bottom: 0.5rem;
-            color: var(--text-secondary);
+            margin-bottom: 0.8rem;
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            position: relative;
+        }
+
+        li::before {
+            content: '✨';
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            font-size: 0.8rem;
+            opacity: 0.6;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, rgba(229, 244, 255, 0.5) 100%);
+            padding: 2.5rem;
+            border-radius: 20px 25px 22px 28px;
+            margin-top: 3rem;
+            text-align: center;
+            transform: rotate(0.5deg);
+            border: 2px solid var(--main-color);
+        }
+
+        .contact-info p {
+            color: var(--text-dark);
+            font-weight: 500;
+            margin: 0;
+        }
+
+        .contact-info strong {
+            color: var(--main-color);
+        }
+
+        .date-info {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem;
+            background: var(--pastel-yellow);
+            border-radius: 15px 20px 18px 22px;
+            transform: rotate(-0.3deg);
+        }
+
+        .date-info p {
+            color: var(--text-dark);
+            font-weight: 600;
+            margin: 0;
         }
 
         /* フッター */
         footer {
-            background: var(--primary-dark);
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
             color: var(--white);
             text-align: center;
-            padding: 2rem 5%;
-            margin-top: 4rem;
+            padding: 3rem 5%;
+            margin-top: 5rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, 
+                var(--main-color) 0%, 
+                var(--sub-color) 33%, 
+                var(--accent-color) 66%, 
+                var(--main-color) 100%
+            );
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--main-color);
+            margin-bottom: 2rem;
+            display: inline-block;
+            transform: rotate(-2deg);
         }
 
         footer p {
             color: var(--white);
             opacity: 0.8;
+            font-size: 1rem;
         }
 
         /* レスポンシブ対応 */
         @media (max-width: 768px) {
             main {
                 padding: 2rem 5%;
+                margin-top: 80px;
             }
 
             .privacy-content {
-                padding: 2rem;
+                padding: 2.5rem;
+                transform: rotate(0deg);
             }
 
             h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             h2 {
                 font-size: 1.5rem;
+            }
+
+            h2::before {
+                display: none;
+            }
+
+            .contact-info, .date-info {
+                transform: rotate(0deg);
             }
         }
     </style>
@@ -152,7 +338,7 @@
     <!-- ヘッダー -->
     <header>
         <nav>
-            <a href="/" class="logo">Enseek</a>
+            <a href="/" class="logo">Rerai</a>
         </nav>
     </header>
 
@@ -161,7 +347,7 @@
         <div class="privacy-content">
             <h1>プライバシーポリシー</h1>
             
-            <p>株式会社Enseek（以下「当社」）は、当社のサービス（以下「本サービス」）におけるユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
+            <p>Rerai（以下「当社」）は、当社のサービス（以下「本サービス」）におけるユーザーの個人情報の取扱いについて、以下のとおりプライバシーポリシー（以下「本ポリシー」）を定めます。</p>
 
             <h2>1. 個人情報の収集について</h2>
             <p>当社は、本サービスの提供にあたり、以下の情報を収集する場合があります：</p>
@@ -200,16 +386,24 @@
 
             <h2>7. お問い合わせ</h2>
             <p>本ポリシーに関するお問い合わせは、以下の連絡先までお願いいたします：</p>
-            <p>株式会社Enseek<br>
-            メールアドレス：contact@enseek-dev.com</p>
+            
+            <div class="contact-info">
+                <p><strong>Rerai</strong><br>
+                メールアドレス：contact@rerai.jp</p>
+            </div>
 
-            <p>制定日：2025年6月2日</p>
+            <div class="date-info">
+                <p>制定日：2024年12月1日</p>
+            </div>
         </div>
     </main>
 
     <!-- フッター -->
     <footer>
-        <p>&copy; 2024 Enseek Inc. All rights reserved.</p>
+        <div class="footer-content">
+            <div class="footer-logo">Rerai</div>
+            <p>&copy; 2024 Rerai Inc. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html> 

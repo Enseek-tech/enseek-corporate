@@ -3,79 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enseek - Define a Novel Experience for Developers</title>
-    <meta name="description" content="株式会社Enseekは、エンジニアのウェルビーイング向上を目的としたITプラットフォーム・アプリケーションを提供し、新しい開発者体験を定義します。">
-    <meta name="keywords" content="Enseek, エンジニア, ウェルビーイング, 開発者体験, DX, ITプラットフォーム, アジャイル, プロジェクト管理">
-    <meta name="author" content="Enseek Inc.">
-    <meta name="robots" content="index, follow">
-    <meta name="format-detection" content="telephone=no">
-    
-    <!-- OGP -->
-    <meta property="og:title" content="Enseek - Define a Novel Experience for Developers">
-    <meta property="og:description" content="エンジニアのウェルビーイング向上を目的としたITプラットフォーム・アプリケーションの企画・開発・提供">
+    <title>Rerai - 技術者の未来を紡ぐ</title>
+    <meta name="description" content="Reraiは人と人、人とAIをつなぎ、技術者の新しい未来を紡ぎ出すテクノロジーカンパニーです。信頼（rely）と安心（relief）を基盤に、AIとの共創で価値を生み出します。">
+    <meta name="keywords" content="Rerai,AI,技術者,エンジニア,共創,信頼,テクノロジー">
+    <meta property="og:title" content="Rerai - 技術者の未来を紡ぐ">
+    <meta property="og:description" content="人とAIの共創で、技術者の新しい未来を紡ぎ出すテクノロジーカンパニー">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://enseek-dev.com">
-    <meta property="og:image" content="https://enseek-dev.com/ogp.jpg">
-    <meta property="og:site_name" content="Enseek">
-    <meta property="og:locale" content="ja_JP">
+    <link rel="canonical" href="https://rerai.jp">
     
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Enseek - Define a Novel Experience for Developers">
-    <meta name="twitter:description" content="エンジニアのウェルビーイング向上を目的としたITプラットフォーム・アプリケーションの企画・開発・提供">
-    <meta name="twitter:image" content="https://enseek-dev.com/ogp.jpg">
-    
-    <link rel="canonical" href="https://enseek-dev.com">
-    <link rel="alternate" hreflang="ja" href="https://enseek-dev.com">
-    <link rel="alternate" hreflang="x-default" href="https://enseek-dev.com">
-    
-    <!-- 構造化データ -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Enseek Inc.",
-        "url": "https://enseek-dev.com",
-        "logo": "https://enseek-dev.com/logo.png",
-        "description": "エンジニアのウェルビーイング向上を目的としたITプラットフォーム・アプリケーションの企画・開発・提供",
-        "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "JP"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "contactType": "customer service",
-            "email": "contact@enseek-dev.com"
-        }
-    }
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
     
     <style>
         :root {
-            --primary-color: #66c3cc;
-            --primary-light: #99d6dd;
-            --primary-dark: #00a3af;
-            --text-primary: #333;
-            --text-secondary: #666;
-            --bg-light: #f8fafb;
+            --main-color: #3bd1dc;
+            --sub-color: #A2DB62;
+            --accent-color: #FFEA00;
+            --text-dark: #333;
+            --text-light: #666;
+            --bg-light: #fafafa;
             --white: #ffffff;
-            --shadow: rgba(0, 0, 0, 0.08);
+            --pastel-pink: #FFE5E5;
+            --pastel-blue: #E5F4FF;
+            --pastel-green: #E8F5E8;
+            --pastel-yellow: #FFF9E5;
         }
-
+        
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+            font-family: 'Zen Maru Gothic', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-dark);
             line-height: 1.6;
-            color: var(--text-primary);
-            background-color: var(--white);
             overflow-x: hidden;
+            background-color: var(--bg-light);
+            background-image: 
+                radial-gradient(circle at 20% 80%, var(--pastel-pink) 0%, transparent 50%);
         }
-
+        
         /* ヘッダー */
         header {
             position: fixed;
@@ -83,461 +51,897 @@
             width: 100%;
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            box-shadow: 0 2px 20px var(--shadow);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.05);
             z-index: 1000;
             transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            border-image: linear-gradient(90deg, 
+                var(--main-color) 0%, 
+                var(--sub-color) 33%, 
+                var(--accent-color) 66%, 
+                var(--main-color) 100%
+            );
+            border-image-slice: 1;
         }
-
+        
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 1.2rem 5%;
             max-width: 1200px;
             margin: 0 auto;
         }
-
+        
         .logo {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 700;
-            color: var(--primary-dark);
+            color: var(--main-color);
             text-decoration: none;
-            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transform: rotate(-2deg);
+            transition: transform 0.3s ease;
         }
-
+        
         .logo:hover {
-            color: var(--primary-color);
+            transform: rotate(2deg) scale(1.05);
         }
-
+        
+        .logo::before {
+            content: '';
+            width: 35px;
+            height: 35px;
+            background: var(--accent-color);
+            border-radius: 50% 40% 60% 30%;
+            position: relative;
+            animation: blob 8s infinite;
+            box-shadow: 
+                inset -3px -3px 10px rgba(255, 255, 255, 0.8),
+                inset 3px 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        @keyframes blob {
+            0%, 100% { border-radius: 50% 40% 60% 30%; transform: rotate(0deg); }
+            25% { border-radius: 40% 60% 30% 50%; transform: rotate(90deg); }
+            50% { border-radius: 60% 30% 50% 40%; transform: rotate(180deg); }
+            75% { border-radius: 30% 50% 40% 60%; transform: rotate(270deg); }
+        }
+        
         .nav-links {
             display: flex;
-            list-style: none;
             gap: 2rem;
+            list-style: none;
         }
-
+        
         .nav-links a {
+            color: var(--text-dark);
             text-decoration: none;
-            color: var(--text-primary);
-            font-weight: 500;
-            transition: color 0.3s ease;
             position: relative;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 1.1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            background: transparent;
         }
-
-        .nav-links a::after {
+        
+        .nav-links a::before {
             content: '';
             position: absolute;
-            bottom: -4px;
+            top: 0;
             left: 0;
-            width: 0;
-            height: 2px;
-            background: var(--primary-color);
-            transition: width 0.3s ease;
+            right: 0;
+            bottom: 0;
+            background: var(--pastel-yellow);
+            border-radius: 15px 20px 18px 22px;
+            transform: scale(0);
+            transition: transform 0.3s ease;
+            z-index: -1;
+            opacity: 0.7;
         }
-
-        .nav-links a:hover::after {
-            width: 100%;
+        
+        .nav-links a:hover {
+            color: var(--text-dark);
+            transform: translateY(-2px) rotate(-1deg);
         }
-
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
+        
+        .nav-links a:hover::before {
+            transform: scale(1) rotate(1deg);
         }
-
-        .hamburger span {
-            width: 25px;
-            height: 3px;
-            background: var(--text-primary);
-            margin: 3px 0;
-            transition: 0.3s;
-        }
-
+        
         /* ヒーローセクション */
         .hero {
-            margin-top: 80px;
-            min-height: calc(100vh - 80px);
+            position: relative;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(102, 195, 204, 0.1) 0%, rgba(0, 163, 175, 0.05) 100%);
-            position: relative;
             overflow: hidden;
+            background: linear-gradient(135deg, rgba(59, 209, 220, 0.05), rgba(162, 219, 98, 0.05));
+            padding: 2rem;
         }
-
+        
         .hero::before {
             content: '';
             position: absolute;
             top: -50%;
-            right: -30%;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, rgba(102, 195, 204, 0.15) 0%, transparent 70%);
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background-image: 
+                radial-gradient(circle at 20% 30%, var(--pastel-pink) 0%, transparent 20%);
             animation: float 20s infinite ease-in-out;
         }
-
+        
         @keyframes float {
-            0%, 100% { transform: translate(0, 0) scale(1); }
-            50% { transform: translate(-30px, -30px) scale(1.1); }
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            33% { transform: translate(30px, -30px) rotate(120deg); }
+            66% { transform: translate(-20px, 20px) rotate(240deg); }
         }
-
+        
         .hero-content {
-            text-align: center;
-            padding: 2rem;
-            max-width: 800px;
             position: relative;
-            z-index: 1;
+            z-index: 2;
+            text-align: center;
+            max-width: 900px;
+            padding: 3rem;
+            animation: fadeInUp 1s ease;
         }
-
+        
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 6vw, 4rem);
             margin-bottom: 1.5rem;
-            color: var(--primary-dark);
+            color: var(--main-color);
+            line-height: 1.4;
             font-weight: 700;
-            line-height: 1.2;
+            letter-spacing: 0.02em;
         }
-
+        
         .hero p {
-            font-size: clamp(1.1rem, 2vw, 1.3rem);
-            color: var(--text-secondary);
+            font-size: 1.3rem;
+            color: var(--text-light);
             margin-bottom: 2rem;
+            line-height: 1.8;
             font-weight: 400;
         }
-
+        
+        .hero-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            margin-bottom: 3rem;
+        }
+        
+        .hero-feature {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2rem;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .hero-feature:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .hero-feature h3 {
+            color: var(--main-color);
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .hero-feature p {
+            font-size: 1rem;
+            color: var(--text-light);
+            margin: 0;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 3rem;
+            background: var(--main-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 25px 30px 28px 32px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 
+                0 4px 15px rgba(59, 209, 220, 0.3),
+                inset 0 -3px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-2deg);
+            font-size: 1.1rem;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+        
+        .cta-button:hover {
+            transform: rotate(2deg) translateY(-3px);
+            box-shadow: 
+                0 6px 25px rgba(59, 209, 220, 0.4),
+                inset 0 -3px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
         /* セクション共通スタイル */
         section {
             padding: 5rem 5%;
             max-width: 1200px;
             margin: 0 auto;
+            position: relative;
         }
-
+        
         .section-title {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             text-align: center;
             margin-bottom: 3rem;
-            color: var(--primary-dark);
             position: relative;
-            padding-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 700;
+            transform: rotate(-1deg);
         }
-
+        
         .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 8px;
+            background: var(--accent-color);
+            border-radius: 10px 15px 12px 18px;
+            opacity: 0.7;
+        }
+        
+        /* 手書き風の装飾SVG */
+        .doodle {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+        
+        .doodle-1 {
+            top: -30px;
+            right: 10%;
+            width: 60px;
+            height: 60px;
+            animation: wiggle 4s infinite ease-in-out;
+        }
+        
+        .doodle-2 {
+            bottom: -20px;
+            left: 5%;
+            width: 80px;
+            height: 80px;
+            animation: wiggle 5s infinite ease-in-out reverse;
+        }
+        
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg) scale(1); }
+            25% { transform: rotate(5deg) scale(1.1); }
+            75% { transform: rotate(-5deg) scale(0.9); }
+        }
+        
+        /* ミッションセクション */
+        .mission {
+            padding: 4rem 5%;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .mission-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 5%;
+        }
+        
+        .mission-item {
+            text-align: center;
+            padding: 2.5rem;
+            border-radius: 25px 30px 28px 32px;
+            background: white;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-1deg);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .mission-item:nth-child(1) {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, rgba(229, 244, 255, 0.3) 100%);
+        }
+        
+        .mission-item:nth-child(2) {
+            background: linear-gradient(135deg, var(--pastel-green) 0%, rgba(232, 245, 232, 0.3) 100%);
+            transform: rotate(1deg);
+        }
+        
+        .mission-item:nth-child(3) {
+            background: linear-gradient(135deg, var(--pastel-yellow) 0%, rgba(255, 249, 229, 0.3) 100%);
+            transform: rotate(-0.5deg);
+        }
+        
+        .mission-item:hover {
+            transform: rotate(0deg) translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+        }
+        
+        .mission-icon {
+            width: 90px;
+            height: 90px;
+            margin: 0 auto 1.5rem;
+            background: white;
+            border-radius: 45% 55% 50% 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            position: relative;
+            box-shadow: 
+                inset 0 -5px 15px rgba(0, 0, 0, 0.05),
+                0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .mission-item h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+            font-weight: 700;
+        }
+        
+        .mission-item p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        /* 事業概要セクション */
+        .business {
+            padding: 4rem 5%;
+            margin: 4rem 0;
+            position: relative;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .business-content {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 5%;
+        }
+        
+        .business-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .business-intro h3 {
+            font-size: 2rem;
+            color: var(--main-color);
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            transform: rotate(-1deg);
+            display: inline-block;
+        }
+        
+        .business-intro p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            line-height: 1.8;
+        }
+        
+        .business-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .business-card {
+            background: var(--bg-light);
+            padding: 2.5rem;
+            border-radius: 20px 25px 22px 28px;
+            position: relative;
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+            transform: rotate(-0.5deg);
+        }
+        
+        .business-card:nth-child(1) {
+            background: linear-gradient(135deg, var(--pastel-blue) 0%, rgba(229, 244, 255, 0.5) 100%);
+        }
+        
+        .business-card:nth-child(2) {
+            background: linear-gradient(135deg, var(--pastel-green) 0%, rgba(232, 245, 232, 0.5) 100%);
+            transform: rotate(0.5deg);
+        }
+        
+        .business-card:nth-child(3) {
+            background: linear-gradient(135deg, var(--pastel-yellow) 0%, rgba(255, 249, 229, 0.5) 100%);
+            transform: rotate(-0.3deg);
+        }
+        
+        .business-card:hover {
+            transform: rotate(0deg) translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-color: var(--main-color);
+        }
+        
+        .card-number {
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: var(--accent-color);
+            color: var(--text-dark);
+            width: 50px;
+            height: 50px;
+            border-radius: 45% 55% 50% 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 5px 15px rgba(255, 234, 0, 0.3);
+            transform: rotate(10deg);
+        }
+        
+        .business-card h4 {
+            font-size: 1.4rem;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            margin-top: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .business-card p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        
+        .business-vision {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, rgba(59, 209, 220, 0.05), rgba(162, 219, 98, 0.05));
+            border-radius: 25px 30px 28px 32px;
+            margin-top: 3rem;
+            position: relative;
+        }
+        
+        .business-vision p {
+            font-size: 1.3rem;
+            color: var(--text-dark);
+            line-height: 2;
+            font-weight: 500;
+        }
+        
+        /* バリューセクション */
+        .values {
+            padding: 4rem 5%;
+            margin: 2rem 0;
+            position: relative;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .value-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 0 5%;
+        }
+        
+        .value-card {
+            padding: 2.5rem;
+            background: white;
+            border-radius: 20px 25px 22px 27px;
+            border: 3px solid var(--pastel-green);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            transform: rotate(-1deg);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .value-card:nth-child(even) {
+            transform: rotate(1deg);
+            border-color: var(--pastel-blue);
+        }
+        
+        .value-card:nth-child(3) {
+            border-color: var(--pastel-pink);
+        }
+        
+        .value-card:nth-child(4) {
+            border-color: var(--pastel-yellow);
+        }
+        
+        .value-card::before {
+            content: '✨';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            opacity: 0;
+            transform: scale(0) rotate(0deg);
+            transition: all 0.3s ease;
+        }
+        
+        .value-card:hover {
+            transform: rotate(0deg) translateY(-5px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-card:hover::before {
+            opacity: 1;
+            transform: scale(1) rotate(360deg);
+        }
+        
+        .value-card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            color: var(--main-color);
+            font-weight: 700;
+        }
+        
+        .value-card p {
+            color: var(--text-light);
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+        
+        /* プロダクトセクション */
+        .products {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            border: 3px solid transparent;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            border-color: var(--main-color);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            background: var(--pastel-blue);
+        }
+        
+        .product-info {
+            padding: 2.5rem;
+        }
+        
+        .product-info h3 {
+            font-size: 1.8rem;
+            color: var(--main-color);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .product-info p {
+            color: var(--text-light);
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        /* フッター */
+        footer {
+            background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+            color: white;
+            padding: 4rem 0 3rem;
+            position: relative;
+            overflow: hidden;
+            margin-top: 5rem;
+            width: 100%;
+        }
+        
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, 
+                var(--main-color) 0%, 
+                var(--sub-color) 33%, 
+                var(--accent-color) 66%, 
+                var(--main-color) 100%
+            );
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 0 5%;
+        }
+        
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--main-color);
+            margin-bottom: 2rem;
+            display: inline-block;
+            transform: rotate(-2deg);
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2.5rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            position: relative;
+            padding: 0.5rem;
+        }
+        
+        .footer-links a::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 50%;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
             transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: var(--primary-color);
-            border-radius: 2px;
+            transition: width 0.3s ease;
         }
-
-        /* ミッション・ビジョン・バリュー */
-        .philosophy {
-            background: var(--bg-light);
-            border-radius: 20px;
-            padding: 4rem 5%;
-            margin: 2rem auto;
+        
+        .footer-links a:hover {
+            opacity: 1;
+            transform: translateY(-2px);
         }
-
-        .philosophy-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+        
+        .footer-links a:hover::after {
+            width: 80%;
         }
-
-        .philosophy-item {
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 15px;
-            box-shadow: 0 5px 20px var(--shadow);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
+        
+        .copyright {
+            opacity: 0.6;
+            font-size: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
-
-        .philosophy-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(102, 195, 204, 0.2);
-        }
-
-        .philosophy-item h3 {
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .philosophy-item p {
-            color: var(--text-secondary);
-            line-height: 1.8;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            min-height: 120px;
-        }
-
-        .philosophy-item p br {
-            margin-bottom: 2rem;
-        }
-
-        /* 事業内容 */
-        .business {
-            text-align: center;
-            padding: 5rem 5%;
-        }
-
-        .business-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 3rem;
-            background: linear-gradient(135deg, rgba(102, 195, 204, 0.05) 0%, rgba(0, 163, 175, 0.02) 100%);
-            border-radius: 20px;
-            box-shadow: 0 5px 20px var(--shadow);
-        }
-
-        .business-content p {
-            font-size: 1.2rem;
-            line-height: 2;
-            color: var(--text-secondary);
-        }
-
-        /* プロダクト（後から追加用） */
-        .products {
-            background: var(--bg-light);
-            padding: 5rem 5%;
-            border-radius: 20px;
-            margin: 2rem auto;
-        }
-
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            padding: 2rem;
-        }
-
-        .product-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 5px 20px var(--shadow);
-            transition: transform 0.3s ease;
-        }
-
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .product-image {
-            width: 100%;
-            height: auto;
-            max-height: 400px;
-            object-fit: contain;
-            object-position: center;
-            padding: 1rem;
-        }
-
-        .product-info {
-            padding: 1.5rem;
-        }
-
-        .product-info h3 {
-            color: var(--primary-dark);
-            margin-bottom: 0.5rem;
-            font-size: 1.3rem;
-        }
-
-        .product-info p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .products-placeholder {
-            text-align: center;
-            padding: 3rem;
-            background: var(--white);
-            border-radius: 15px;
-            box-shadow: 0 5px 20px var(--shadow);
-        }
-
-        .products-placeholder p {
-            color: var(--text-secondary);
-            font-style: italic;
-        }
-
-        /* 会社情報（後から追加用） */
-        .company-info {
-            padding: 5rem 5%;
-        }
-
-        .info-placeholder {
-            background: linear-gradient(135deg, rgba(102, 195, 204, 0.05) 0%, rgba(0, 163, 175, 0.02) 100%);
-            padding: 3rem;
-            border-radius: 15px;
-            text-align: center;
-        }
-
-        /* お問い合わせ */
-        .contact {
-            background: var(--bg-light);
-            padding: 5rem 5%;
-            border-radius: 20px;
-            margin: 2rem auto;
-            text-align: center;
-        }
-
-        .contact-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 2rem;
-            background: var(--white);
-            border-radius: 15px;
-            box-shadow: 0 5px 20px var(--shadow);
-        }
-
-        .contact-form p {
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-        }
-
-        /* フッター */
-        footer {
-            background: var(--primary-dark);
-            color: var(--white);
-            text-align: center;
-            padding: 2rem 5%;
-        }
-
-        footer p {
-            opacity: 0.8;
-        }
-
-        /* レスポンシブ対応 */
+        
+        /* レスポンシブ */
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--white);
-                flex-direction: column;
-                padding: 1rem;
-                box-shadow: 0 5px 20px var(--shadow);
             }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .hamburger {
-                display: flex;
-            }
-
-            .hamburger.active span:nth-child(1) {
-                transform: rotate(-45deg) translate(-5px, 6px);
-            }
-
-            .hamburger.active span:nth-child(2) {
-                opacity: 0;
-            }
-
-            .hamburger.active span:nth-child(3) {
-                transform: rotate(45deg) translate(-5px, -6px);
-            }
-
-            .philosophy-grid {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
+            
             section {
                 padding: 3rem 5%;
             }
-
-            .hero {
-                min-height: calc(100vh - 60px);
-                margin-top: 60px;
+            
+            .mission, .values, .business {
+                padding: 2rem;
             }
-        }
-
-        /* スムーズスクロール */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* アニメーション */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.6s ease, transform 0.6s ease;
-        }
-
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .hero-content {
+                padding: 1.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .business-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .business-card {
+                transform: rotate(0deg) !important;
+            }
+            
+            .mission-item, .value-card {
+                transform: rotate(0deg) !important;
+            }
         }
     </style>
 </head>
 <body>
-    <!-- ヘッダー -->
     <header>
         <nav>
-            <a href="#home" class="logo">Enseek</a>
+            <a href="#" class="logo">Rerai</a>
             <ul class="nav-links">
-                <li><a href="#home">ホーム</a></li>
-                <li><a href="#philosophy">理念</a></li>
-                <li><a href="#business">事業内容</a></li>
+                <li><a href="#mission">ミッション</a></li>
+                <li><a href="#business">事業概要</a></li>
+                <li><a href="#values">バリュー</a></li>
                 <li><a href="#products">プロダクト</a></li>
-                <li><a href="#company">会社情報</a></li>
                 <li><a href="#contact">お問い合わせ</a></li>
             </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
         </nav>
     </header>
-
-    <!-- ヒーローセクション -->
-    <section id="home" class="hero">
-        <div class="hero-content fade-in">
-            <h1>Define a Novel Experience<br>for Developers</h1>
-            <p>エンジニアの心と技術、そしてコミュニティが繁栄する世界を目指して</p>
+    
+    <main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>技術者の未来を紡ぐ</h1>
+            <p>人と人、人とAIをつなぎ、新しい価値を生み出す。<br>Reraiは技術者の可能性を最大限に引き出します。</p>
+            
+            <div class="hero-features">
+                <div class="hero-feature">
+                    <h3>AIとの共創</h3>
+                    <p>AIは脅威ではなく、創造性を解放するパートナー</p>
+                </div>
+                <div class="hero-feature">
+                    <h3>心理的安全性</h3>
+                    <p>エンジニアが安心して成長できる環境づくり</p>
+                </div>
+                <div class="hero-feature">
+                    <h3>開発者体験</h3>
+                    <p>一人ひとりに最適化された開発支援</p>
+                </div>
+            </div>
+            
+            <a href="#contact" class="cta-button">お問い合わせ</a>
         </div>
     </section>
-
-    <!-- ミッション・ビジョン・バリュー -->
-    <section id="philosophy" class="philosophy fade-in">
-        <h2 class="section-title">Our Philosophy</h2>
-        <div class="philosophy-grid">
-            <div class="philosophy-item">
-                <h3>Mission</h3>
-                <p>Design a Novel Experience for Developers.<br>新しい開発者体験をデザインする</p>
-            </div>
-            <div class="philosophy-item">
-                <h3>Vision</h3>
-                <p>Seek a World where Engineers Thrive in Mind, Craft, and Community.<br>エンジニアの心、技術、コミュニティが繁栄する世界を探求する</p>
-            </div>
-            <div class="philosophy-item">
-                <h3>Value</h3>
-                <p>Extend Potential, Focus Essential.<br>可能性を拡張し、本質に集中する</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- 事業内容 -->
-    <section id="business" class="business fade-in">
-        <h2 class="section-title">事業内容</h2>
+    
+    <section id="business" class="business">
+        <h2 class="section-title">事業概要</h2>
+        <svg class="doodle doodle-1" viewBox="0 0 60 60">
+            <path d="M30 10 Q40 20 30 30 T30 50" stroke="#A2DB62" stroke-width="3" fill="none" stroke-linecap="round"/>
+            <circle cx="30" cy="10" r="5" fill="#FFEA00"/>
+        </svg>
         <div class="business-content">
-            <p>エンジニアのウェルビーイング向上を目的とした<br>ITプラットフォーム、アプリケーションの<br>企画・開発・提供</p>
+            <div class="business-intro">
+                <h3>エンジニアの新しい物語を紡ぐ</h3>
+                <p>AI時代の今、エンジニアの役割は大きく進化しています。<br>
+                私たちは、その変化を最高の成長機会に変えていきます。</p>
+            </div>
+            
+            <div class="business-cards">
+                <div class="business-card">
+                    <div class="card-number">01</div>
+                    <h4>人間らしさへの回帰</h4>
+                    <p>コードを書く作業はAIが担い、エンジニアはより創造的で人間的な価値を生み出す存在へ。チームワーク、発想力、共感力がこれからの鍵になります。</p>
+                </div>
+                
+                <div class="business-card">
+                    <div class="card-number">02</div>
+                    <h4>心理的安全性の創造</h4>
+                    <p>最高のパフォーマンスは、安心できる環境から生まれます。メンタルケアと職場環境の改善を通じて、エンジニアが本来の力を発揮できる場を作ります。</p>
+                </div>
+                
+                <div class="business-card">
+                    <div class="card-number">03</div>
+                    <h4>開発者体験の最大化</h4>
+                    <p>一人ひとりに寄り添うプロダクトとアジャイル開発支援。AIと人間が共創する新しい開発スタイルで、エンジニアの可能性を最大限に引き出します。</p>
+                </div>
+            </div>
+            
+            <div class="business-vision">
+                <p>私たちは、テクノロジーと人間性が調和する未来を創ります。<br>
+                AIは脅威ではなく、エンジニアの創造性を解放するパートナーです。</p>
+            </div>
         </div>
     </section>
-
-    <!-- プロダクト -->
-    <section id="products" class="products fade-in">
+    
+    <section id="mission" class="mission">
+        <h2 class="section-title">私たちのミッション</h2>
+        <div class="mission-grid">
+            <div class="mission-item">
+                <div class="mission-icon">🤝</div>
+                <h3>信頼（Rely）</h3>
+                <p>依存ではなく信頼。人と人との繋がりを大切にし、お互いがよりどころとなる関係を築きます。</p>
+            </div>
+            <div class="mission-item">
+                <div class="mission-icon">🌱</div>
+                <h3>安心（Relief）</h3>
+                <p>技術者とその仲間が穏やかな心で働ける環境を創造し、真のリラックスを提供します。</p>
+            </div>
+            <div class="mission-item">
+                <div class="mission-icon">🚀</div>
+                <h3>未来（Mirai）</h3>
+                <p>新しい技術者のあり方を創造し、AIとの共創で価値ある未来を紡ぎ出します。</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="values" class="values">
+        <h2 class="section-title">私たちの価値観</h2>
+        <div class="value-cards">
+            <div class="value-card">
+                <h3>つながりを紡ぐ</h3>
+                <p>糸を紡ぐように、一つ一つの出会いを大切にし、強固な信頼関係を築いていきます。</p>
+            </div>
+            <div class="value-card">
+                <h3>再生と成長</h3>
+                <p>何度でも新しい未来を描き、技術者の可能性を書き換え続けます。</p>
+            </div>
+            <div class="value-card">
+                <h3>AIとの共創</h3>
+                <p>人間とAIが互いの強みを活かし、新たな価値を生み出す未来を実現します。</p>
+            </div>
+            <div class="value-card">
+                <h3>温かみのある技術</h3>
+                <p>最先端の技術に人間らしさを加え、心地よいソリューションを提供します。</p>
+            </div>
+        </div>
+    </section>
+    
+    <section id="products" class="products">
         <h2 class="section-title">プロダクト</h2>
         <div class="product-grid">
             <div class="product-card">
@@ -549,92 +953,75 @@
             </div>
         </div>
     </section>
-
-    <!-- 会社情報（プレースホルダー） -->
-    <section id="company" class="company-info fade-in">
-        <h2 class="section-title">会社情報</h2>
-        <div class="info-placeholder">
-            <p>会社情報の詳細は準備中です</p>
-        </div>
-    </section>
-
-    <!-- お問い合わせ -->
-    <section id="contact" class="contact fade-in">
-        <h2 class="section-title">お問い合わせ</h2>
-        <div class="contact-form">
-            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd8UuJfWktLdTICgZNLdMAM4Mt8vB_JTn1Lo_ygtDqcyIv3IQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">読み込んでいます…</iframe>
-        </div>
-    </section>
-
-    <!-- フッター -->
+    </main>
+    
     <footer>
-        <p>&copy; 2025 Enseek Inc. All rights reserved.</p>
-        <p><a href="/privacy-policy.html" style="color: var(--white); opacity: 0.8; text-decoration: none;">プライバシーポリシー</a></p>
+        <div class="footer-content">
+            <div class="footer-logo">Rerai</div>
+            <div class="footer-links">
+                <a href="#mission">ミッション</a>
+                <a href="#business">事業概要</a>
+                <a href="#values">バリュー</a>
+                <a href="#products">プロダクト</a>
+                <a href="#contact">お問い合わせ</a>
+                <a href="#">プライバシーポリシー</a>
+            </div>
+            <p class="copyright">&copy; 2024 Rerai Inc. All rights reserved.</p>
+        </div>
     </footer>
-
+    
     <script>
-        // ハンバーガーメニュー
-        const hamburger = document.querySelector('.hamburger');
-        const navLinks = document.querySelector('.nav-links');
-
-        hamburger.addEventListener('click', () => {
-            hamburger.classList.toggle('active');
-            navLinks.classList.toggle('active');
-        });
-
-        // スクロール時のヘッダー処理
-        let lastScroll = 0;
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                header.style.padding = '0.5rem 0';
-            } else {
-                header.style.padding = '1rem 0';
-            }
-
-            lastScroll = currentScroll;
-        });
-
-        // フェードインアニメーション
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        const fadeElements = document.querySelectorAll('.fade-in');
-        fadeElements.forEach(el => observer.observe(el));
-
-        // スムーズスクロール（モバイル対応）
+        // スムーズスクロール
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    const headerOffset = 80;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
                     });
-
-                    // モバイルメニューを閉じる
-                    navLinks.classList.remove('active');
-                    hamburger.classList.remove('active');
                 }
             });
+        });
+        
+        // スクロールエフェクト
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // アニメーション対象の要素を監視
+        document.querySelectorAll('.mission-item, .value-card, .business-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+        
+        // ヘッダーのスクロール効果
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > lastScrollTop && scrollTop > 100) {
+                header.style.transform = 'translateY(-100%)';
+            } else {
+                header.style.transform = 'translateY(0)';
+            }
+            
+            lastScrollTop = scrollTop;
         });
     </script>
 </body>
