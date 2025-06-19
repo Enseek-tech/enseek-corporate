@@ -83,12 +83,11 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            transform: rotate(-2deg);
             transition: transform 0.3s ease;
         }
 
         .logo:hover {
-            transform: rotate(2deg) scale(1.05);
+            transform: scale(1.05);
         }
 
         .logo::before {
@@ -127,14 +126,9 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             position: relative;
             overflow: hidden;
-            transform: rotate(-0.5deg);
             transition: all 0.3s ease;
         }
 
-        .privacy-content:hover {
-            transform: rotate(0deg) translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
 
         .privacy-content::before {
             content: '';
@@ -157,7 +151,6 @@
             margin-bottom: 2rem;
             text-align: center;
             font-weight: 700;
-            transform: rotate(-1deg);
             position: relative;
         }
 
@@ -181,17 +174,7 @@
             padding-bottom: 0.8rem;
             border-bottom: 3px solid var(--pastel-blue);
             font-weight: 700;
-            transform: rotate(-0.5deg);
             position: relative;
-        }
-
-        h2::before {
-            content: '🔒';
-            position: absolute;
-            left: -30px;
-            top: 0;
-            font-size: 1.2rem;
-            opacity: 0.7;
         }
 
         p {
@@ -214,22 +197,12 @@
             position: relative;
         }
 
-        li::before {
-            content: '✨';
-            position: absolute;
-            left: -1.5rem;
-            top: 0;
-            font-size: 0.8rem;
-            opacity: 0.6;
-        }
-
         .contact-info {
             background: linear-gradient(135deg, var(--pastel-blue) 0%, rgba(229, 244, 255, 0.5) 100%);
             padding: 2.5rem;
             border-radius: 20px 25px 22px 28px;
             margin-top: 3rem;
             text-align: center;
-            transform: rotate(0.5deg);
             border: 2px solid var(--main-color);
         }
 
@@ -249,7 +222,6 @@
             padding: 2rem;
             background: var(--pastel-yellow);
             border-radius: 15px 20px 18px 22px;
-            transform: rotate(-0.3deg);
         }
 
         .date-info p {
@@ -295,7 +267,6 @@
             color: var(--main-color);
             margin-bottom: 2rem;
             display: inline-block;
-            transform: rotate(-2deg);
         }
 
         footer p {
@@ -313,7 +284,6 @@
 
             .privacy-content {
                 padding: 2.5rem;
-                transform: rotate(0deg);
             }
 
             h1 {
@@ -322,14 +292,6 @@
 
             h2 {
                 font-size: 1.5rem;
-            }
-
-            h2::before {
-                display: none;
-            }
-
-            .contact-info, .date-info {
-                transform: rotate(0deg);
             }
         }
     </style>
@@ -393,7 +355,7 @@
             </div>
 
             <div class="date-info">
-                <p>制定日：2024年12月1日</p>
+                <p>制定日：2025年6月19日</p>
             </div>
         </div>
     </main>
@@ -402,7 +364,7 @@
     <footer>
         <div class="footer-content">
             <div class="footer-logo">Rerai</div>
-            <p>&copy; 2024 Rerai Inc. All rights reserved.</p>
+            <p>&copy; 2025 Rerai Inc. All rights reserved.</p>
         </div>
     </footer>
 </body>
